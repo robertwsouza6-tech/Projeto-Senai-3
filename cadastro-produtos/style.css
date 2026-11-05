@@ -1,0 +1,441 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Bricolage+Grotesque:opsz,wght@12..96,600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #15102F;
+    --secondary-color: #6943A1;
+    --accent-color: #D7FF62;
+    --tertiary-color: #FFFFFFB3;
+    --font-family: "DM Sans", sans-serif;
+    --card-bg: rgba(255, 255, 255, 0.03);
+    --border-color: rgba(255, 255, 255, 0.08);
+}
+
+body {
+    background-color: var(--primary-color);
+    color: #fff;
+    min-height: 100vh;
+    min-width: 320px;
+    overflow-x: hidden;
+    font-family: var(--font-family);
+}
+
+header {
+    background-color: var(--primary-color);
+    position: relative;
+    width: 100%;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.header_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 26px 5vw;
+    width: 100%;
+}
+
+.logo {
+    display: block;
+    width: auto;
+    height: 40px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.header_nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.header_nav ul {
+    display: flex;
+    gap: clamp(24px, 3vw, 52px);
+    list-style: none;
+}
+
+.header_nav a {
+    color: var(--tertiary-color);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+    transition: color .2s ease;
+}
+
+.header_nav a:hover {
+    color: var(--accent-color);
+}
+
+.header_explore_btn {
+    color: var(--tertiary-color);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.header_explore_btn:hover {
+    color: var(--accent-color);
+    transform: translateX(3px);
+}
+
+.ice_cream {
+    color: var(--accent-color);
+    display: none;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    line-height: 0;
+    flex-shrink: 0;
+}
+
+.ice_cream svg {
+    height: 40px;
+    width: 40px;
+    fill: currentColor;
+}
+
+
+.cadastro_container {
+    min-height: calc(100vh - 93px);
+    display: flex;
+    align-items: stretch;
+    display: grid;
+    grid-template-columns: 1fr 1.15fr;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.cadastro_visual {
+    position: relative;
+    background-image: url(../img/Casquinha\ Cósmica\ com\ Galáxia\ Espiral.png);
+    display: flex;
+    align-items: center;
+    padding: 80px 6vw;
+    overflow: hidden;
+}
+
+.visual_content {
+    position: relative;
+    z-index: 2;
+    max-width: 420px;
+}
+
+.cs_span {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    color: var(--accent-color);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    display: inline-block;
+    margin-bottom: 16px;
+}
+
+.cadastro_visual h1 {
+    color: #F8F3E7;
+    font-size: clamp(42px, 4.5vw, 64px);
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-stretch: condensed;
+    font-weight: 600;
+    line-height: 0.9;
+    letter-spacing: -.04em;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+}
+
+.h2_span {
+    color: var(--accent-color);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 400;
+    letter-spacing: -.05em;
+    text-transform: none;
+    font-style: italic;
+}
+
+.cadastro_visual p {
+    color: var(--tertiary-color);
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 360px;
+}
+
+.orb_decoration {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(40px);
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.orb_1 {
+    width: 280px;
+    height: 280px;
+    background: radial-gradient(circle, #6943A1 0%, transparent 70%);
+    top: -80px;
+    right: -60px;
+}
+
+.orb_2 {
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, #D7FF62 0%, transparent 70%);
+    bottom: 10%;
+    left: -40px;
+    opacity: 0.25;
+}
+
+.orb_3 {
+    width: 140px;
+    height: 140px;
+    background: radial-gradient(circle, #9B6DFF 0%, transparent 70%);
+    bottom: 25%;
+    right: 15%;
+    opacity: 0.4;
+}
+
+.cadastro_form_wrapper {
+    background: #120e28;
+    padding: 60px 6vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-left: 1px solid var(--border-color);
+}
+
+.form_header {
+    margin-bottom: 36px;
+}
+
+.form_header h2 {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    color: #F8F3E7;
+    margin-bottom: 8px;
+    letter-spacing: -0.03em;
+}
+
+.form_header p {
+    color: var(--tertiary-color);
+    font-size: 15px;
+}
+
+.produto_form {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.form_group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form_group label {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--tertiary-color);
+    letter-spacing: 0.3px;
+}
+
+.form_group input,
+.form_group select,
+.form_group textarea {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 14px 18px;
+    color: #fff;
+    font-family: var(--font-family);
+    font-size: 15px;
+    transition: border-color 0.25s ease, background 0.25s ease;
+    outline: none;
+}
+
+.form_group input::placeholder,
+.form_group textarea::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.form_group input:focus,
+.form_group select:focus,
+.form_group textarea:focus {
+    border-color: var(--accent-color);
+    background: rgba(215, 255, 98, 0.03);
+}
+
+.form_group select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23FFFFFFB3' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    cursor: pointer;
+}
+
+.form_group select option {
+    background: #1a1438;
+    color: #fff;
+}
+
+.form_group textarea {
+    resize: vertical;
+    min-height: 120px;
+    line-height: 1.5;
+}
+
+.form_row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.upload_area {
+    border: 1.5px dashed var(--border-color);
+    border-radius: 14px;
+    padding: 32px 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: border-color 0.25s ease, background 0.25s ease;
+    background: var(--card-bg);
+}
+
+.upload_area:hover,
+.upload_area.dragover {
+    border-color: var(--accent-color);
+    background: rgba(215, 255, 98, 0.04);
+}
+
+.upload_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    color: var(--tertiary-color);
+}
+
+.upload_content svg {
+    color: var(--accent-color);
+    opacity: 0.8;
+}
+
+.upload_content p {
+    font-size: 14px;
+}
+
+.upload_content p span {
+    color: var(--accent-color);
+    font-weight: 500;
+}
+
+.upload_content small {
+    font-size: 12px;
+    opacity: 0.6;
+}
+
+.form_actions {
+    display: flex;
+    gap: 16px;
+    margin-top: 12px;
+}
+
+.btn_primary,
+.btn_secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px 28px;
+    border-radius: 40px;
+    font-family: var(--font-family);
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+
+.btn_primary {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    flex: 1;
+}
+
+.btn_primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(215, 255, 98, 0.25);
+}
+
+.btn_secondary {
+    background: transparent;
+    color: var(--tertiary-color);
+    border: 1px solid var(--border-color);
+}
+
+.btn_secondary:hover {
+    border-color: rgba(255, 255, 255, 0.25);
+    color: #fff;
+}
+
+@media (max-width: 1000px) {
+    .cadastro_container {
+        grid-template-columns: 1fr;
+    }
+
+    .cadastro_visual {
+        min-height: 280px;
+        padding: 50px 5vw;
+    }
+
+    .cadastro_form_wrapper {
+        border-left: none;
+        border-top: 1px solid var(--border-color);
+        padding: 50px 5vw;
+    }
+}
+
+@media (max-width: 900px) {
+
+    .header_nav,
+    .header_explore_btn {
+        display: none;
+    }
+
+    .ice_cream {
+        display: block;
+    }
+}
+
+@media (max-width: 600px) {
+    .form_row {
+        grid-template-columns: 1fr;
+    }
+
+    .form_actions {
+        flex-direction: column-reverse;
+    }
+
+    .btn_primary,
+    .btn_secondary {
+        width: 100%;
+    }
+
+    .cadastro_visual h1 {
+        font-size: 36px;
+    }
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Produto | Creme Galáctico</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header_container">
+            <a href="index.html">
+                <img src="../img/Logo.png" alt="Creme Galáctico" class="logo">
+            </a>
+            <nav class="header_nav">
+                <ul>
+                    <li><a href="#">Sabores</a></li>
+                    <li><a href="#">Nossa galáxia</a></li>
+                    <li><a href="#">Lojas</a></li>
+                    <li><a href="#">Cadastro</a></li>
+                </ul>
+            </nav>
+            <a href="#" class="header_explore_btn">
+                Explorar sabores
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+            </a>
+            <button class="ice_cream">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                    <path d="M463.1 224C463.7 218.7 464 213.4 464 208C464 128.5 399.5 64 320 64C240.5 64 176 128.5 176 208C176 213.4 176.3 218.7 176.9 224L176 224C149.5 224 128 245.5 128 272C128 298.5 149.5 320 176 320L464 320C490.5 320 512 298.5 512 272C512 245.5 490.5 224 464 224L463.1 224zM192 368L297.2 593.5C301.3 602.3 310.2 608 320 608C329.8 608 338.6 602.3 342.8 593.5L448 368L192 368z" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="cadastro_section">
+            <div class="cadastro_container">
+                
+                <div class="cadastro_visual">
+                    <div class="visual_content">
+                        <span class="cs_span">- ÁREA ADMINISTRATIVA</span>
+                        <h1>NOVO SABOR<br>NO <span class="h2_span">universo.</span></h1>
+                        <p>Cadastre um novo produto e expanda a galáxia de sabores da Creme Galáctico.</p>
+                    </div>
+                    <div class="orb_decoration orb_1"></div>
+                    <div class="orb_decoration orb_2"></div>
+                    <div class="orb_decoration orb_3"></div>
+                </div>
+
+                <div class="cadastro_form_wrapper">
+                    <div class="form_header">
+                        <h2>Cadastrar Produto</h2>
+                        <p>Preencha os dados do novo sabor</p>
+                    </div>
+
+                    <form class="produto_form">
+                        <div class="form_group">
+                            <label for="nome">Nome do Produto</label>
+                            <input type="text" id="nome" name="nome" placeholder="Ex: Nebulosa de Morango" required>
+                        </div>
+
+                        <div class="form_row">
+                            <div class="form_group">
+                                <label for="preco">Preço por quilo (R$)</label>
+                                <input type="number" id="preco" name="preco" placeholder="0,00" step="0.01" min="0" required>
+                            </div>
+                            <div class="form_group">
+                                <label for="categoria">Categoria</label>
+                                <select id="categoria" name="categoria" required>
+                                    <option value="" disabled selected>Selecione</option>
+                                    <option value="classicos">Clássicos Cósmicos</option>
+                                    <option value="especiais">Edição Especial</option>
+                                    <option value="sazonais">Sazonais</option>
+                                    <option value="premium">Premium Galáctico</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form_group">
+                            <label for="descricao">Descrição Detalhada</label>
+                            <textarea id="descricao" name="descricao" rows="5" placeholder="Conte a história e os ingredientes deste sabor..." required></textarea>
+                        </div>
+
+                        <div class="form_group">
+                            <label>Imagem do Produto</label>
+                            <div class="upload_area" id="uploadArea">
+                                <input type="file" id="imagem" name="imagem" accept="image/*" hidden>
+                                <div class="upload_content">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                        <polyline points="17 8 12 3 7 8"></polyline>
+                                        <line x1="12" y1="3" x2="12" y2="15"></line>
+                                    </svg>
+                                    <p>Arraste uma imagem ou <span>clique para selecionar</span></p>
+                                    <small>PNG, JPG ou WEBP • Máx. 5MB</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form_actions">
+                            <button type="button" class="btn_secondary">Cancelar</button>
+                            <button type="submit" class="btn_primary">
+                                Cadastrar Produto
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
